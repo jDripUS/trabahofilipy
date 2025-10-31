@@ -4,3 +4,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculadora de Juros Compostos</title>
 </head>
+<body>
+  <h1>Calculadora de Juros Compostos</h1>
+
+  <label for="capital">Capital inicial (R$):</label>
+  <input type="number" id="capital" placeholder="Ex: 1000"><br><br>
+
+  <label for="taxa">Taxa de juros (% ao mês):</label>
+  <input type="number" id="taxa" placeholder="Ex: 2"><br><br>
+
+  <label for="tempo">Tempo (meses):</label>
+  <input type="number" id="tempo" placeholder="Ex: 12"><br><br>
+
+  <button onclick="calcular()">Calcular</button>
+
+  <h3 id="resultado"></h3>
