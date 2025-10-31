@@ -1,6 +1,7 @@
 # Calculadora de Juros Compostos 💰
 
 Projeto desenvolvido para a disciplina de Desenvolvimento Colaborativo, com o objetivo de praticar o uso do **Git**, **GitHub** e **versionamento semântico**.
+Colaboradores:Heitor João Hector e Vinicius
 
 ## 🎯 Tema 3: Calculadora de Juros Compostos
 
