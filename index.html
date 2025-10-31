@@ -3,40 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculadora de Juros Compostos</title>
+  <title>Calculadora de Juros Compostos 💰</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Calculadora de Juros Compostos</h1>
+  <div class="container">
+    <h1>Calculadora de Juros Compostos</h1>
+    <div class="form">
+      <label for="capital">💵 Capital inicial (R$):</label>
+      <input type="number" id="capital" placeholder="Ex: 1000">
 
-  <label for="capital">Capital inicial (R$):</label>
-  <input type="number" id="capital" placeholder="Ex: 1000"><br><br>
+      <label for="taxa">📈 Taxa de juros (% ao mês):</label>
+      <input type="number" id="taxa" placeholder="Ex: 2">
 
-  <label for="taxa">Taxa de juros (% ao mês):</label>
-  <input type="number" id="taxa" placeholder="Ex: 2"><br><br>
+      <label for="tempo">⏳ Tempo (meses):</label>
+      <input type="number" id="tempo" placeholder="Ex: 12">
 
-  <label for="tempo">Tempo (meses):</label>
-  <input type="number" id="tempo" placeholder="Ex: 12"><br><br>
+      <button onclick="calcular()">Calcular</button>
+    </div>
 
-  <button onclick="calcular()">Calcular</button>
+    <div id="resultado" class="resultado"></div>
+  </div>
 
-  <h3 id="resultado"></h3>
   <script>
     function calcular() {
       const capital = parseFloat(document.getElementById("capital").value);
       const taxa = parseFloat(document.getElementById("taxa").value) / 100;
       const tempo = parseInt(document.getElementById("tempo").value);
 
+      const resultado = document.getElementById("resultado");
+
       if (isNaN(capital) || isNaN(taxa) || isNaN(tempo)) {
-        document.getElementById("resultado").innerText = "Preencha todos os campos corretamente.";
+        resultado.innerHTML = `<p class="erro">⚠️ Preencha todos os campos corretamente.</p>`;
         return;
       }
 
       const montante = capital * Math.pow((1 + taxa), tempo);
       const lucro = montante - capital;
 
-      document.getElementById("resultado").innerHTML = `
-        Montante final: R$ ${montante.toFixed(2)} <br>
-        Lucro obtido: R$ ${lucro.toFixed(2)}
+      resultado.innerHTML = `
+        <h2>Resultado</h2>
+        <p>💰 Montante final: <strong>R$ ${montante.toFixed(2)}</strong></p>
+        <p>📊 Lucro obtido: <strong>R$ ${lucro.toFixed(2)}</strong></p>
       `;
     }
   </script>
