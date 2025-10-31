@@ -19,3 +19,25 @@
   <button onclick="calcular()">Calcular</button>
 
   <h3 id="resultado"></h3>
+  <script>
+    function calcular() {
+      const capital = parseFloat(document.getElementById("capital").value);
+      const taxa = parseFloat(document.getElementById("taxa").value) / 100;
+      const tempo = parseInt(document.getElementById("tempo").value);
+
+      if (isNaN(capital) || isNaN(taxa) || isNaN(tempo)) {
+        document.getElementById("resultado").innerText = "Preencha todos os campos corretamente.";
+        return;
+      }
+
+      const montante = capital * Math.pow((1 + taxa), tempo);
+      const lucro = montante - capital;
+
+      document.getElementById("resultado").innerHTML = `
+        Montante final: R$ ${montante.toFixed(2)} <br>
+        Lucro obtido: R$ ${lucro.toFixed(2)}
+      `;
+    }
+  </script>
+</body>
+</html>
