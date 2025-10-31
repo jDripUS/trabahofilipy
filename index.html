@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculadora de Juros Compostos 💰</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculadora de Juros Compostos - v2.0.0</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
     <h1>Calculadora de Juros Compostos</h1>
+
     <div class="form">
       <label for="capital">💵 Capital inicial (R$):</label>
       <input type="number" id="capital" placeholder="Ex: 1000">
@@ -19,34 +20,12 @@
       <label for="tempo">⏳ Tempo (meses):</label>
       <input type="number" id="tempo" placeholder="Ex: 12">
 
-      <button onclick="calcular()">Calcular</button>
+      <button id="btnCalcular">Calcular</button>
     </div>
 
     <div id="resultado" class="resultado"></div>
   </div>
 
-  <script>
-    function calcular() {
-      const capital = parseFloat(document.getElementById("capital").value);
-      const taxa = parseFloat(document.getElementById("taxa").value) / 100;
-      const tempo = parseInt(document.getElementById("tempo").value);
-
-      const resultado = document.getElementById("resultado");
-
-      if (isNaN(capital) || isNaN(taxa) || isNaN(tempo)) {
-        resultado.innerHTML = `<p class="erro">⚠️ Preencha todos os campos corretamente.</p>`;
-        return;
-      }
-
-      const montante = capital * Math.pow((1 + taxa), tempo);
-      const lucro = montante - capital;
-
-      resultado.innerHTML = `
-        <h2>Resultado</h2>
-        <p>💰 Montante final: <strong>R$ ${montante.toFixed(2)}</strong></p>
-        <p>📊 Lucro obtido: <strong>R$ ${lucro.toFixed(2)}</strong></p>
-      `;
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

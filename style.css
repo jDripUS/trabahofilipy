@@ -1,72 +1,93 @@
+/* style.css - v2.0.0 */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #8ec5fc, #e0c3fc);
   margin: 0;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px;
 }
 
 .container {
-  background-color: #ffffffcc;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  width: 320px;
+  background-color: rgba(255,255,255,0.95);
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  width: 360px;
+  max-width: 100%;
   text-align: center;
 }
 
 h1 {
-  color: #333;
-  margin-bottom: 20px;
+  color: #2b2b2b;
+  margin: 0 0 16px 0;
+  font-size: 22px;
 }
 
 .form {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin-top: 6px;
+}
+
+label {
+  text-align: left;
+  font-size: 14px;
+  color: #444;
+  margin-left: 6px;
 }
 
 input {
-  padding: 8px;
-  border: 1px solid #aaa;
+  padding: 10px;
   border-radius: 8px;
+  border: 1px solid #cfcfcf;
+  font-size: 15px;
   text-align: center;
-  transition: 0.2s;
+  transition: box-shadow .15s, border-color .15s;
 }
 
 input:focus {
-  border-color: #5b4cf0;
-  box-shadow: 0 0 4px #5b4cf0;
   outline: none;
+  border-color: #6b5cf6;
+  box-shadow: 0 0 6px rgba(107,92,246,0.18);
 }
 
 button {
-  margin-top: 10px;
+  margin-top: 6px;
   padding: 10px;
-  border: none;
   border-radius: 10px;
-  background-color: #5b4cf0;
+  border: none;
+  background-color: #6b5cf6;
   color: white;
   font-size: 15px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: transform .12s ease, background-color .12s;
 }
 
 button:hover {
-  background-color: #4839d6;
+  transform: translateY(-2px);
+  background-color: #5849d6;
 }
 
 .resultado {
-  margin-top: 20px;
-  background-color: #f7f7f7;
-  padding: 15px;
+  margin-top: 18px;
+  background-color: #fbfbff;
+  padding: 12px;
   border-radius: 10px;
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #efefff;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.03);
+  text-align: left;
+}
+
+.resultado h2 {
+  margin: 0 0 8px 0;
 }
 
 .erro {
-  color: red;
-  font-weight: bold;
+  color: #c72b2b;
+  font-weight: 700;
+  text-align: center;
 }
