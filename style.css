@@ -1,7 +1,7 @@
 /* style.css - v2.0.0 */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #8ec5fc, #e0c3fc);
+  background: linear-gradient(135deg, #8ec5fc, #c3fcdc);
   margin: 0;
   min-height: 100vh;
   display: flex;
