@@ -25,9 +25,9 @@ Onde:
 
 | Nome | Usuário GitHub |
 |------|----------------|
-| [Seu Nome] | @[seu-usuario] |
-| [Colega 1] | @[usuario1] |
-| [Colega 2] | @[usuario2] |
+| [Heitor Ricardo] | @jDripUS |
+| [João Hector] | @BlueGames24 |
+| [Vinicius] | @viniciusoliveira00 |
 
 ---
 
